@@ -1,0 +1,38 @@
+pkg:
+https://www.youtube.com/watch?v=5GySeDR4p1w&t=300s
+
+npm i -g pkg
+
+"bin": "app.js",
+
+
+"pkg":{
+    "asserts":[
+      "./node_modules/**/*"
+    ],
+    "scripts":[
+      "./build"
+    ]
+  }
+
+
+pkg . --targets node16-windows-x64
+
+create build folder (npm run build);
+
+in server app.js add:
+app.use(express.static(path.join(__dirname, "build")));
+app.get("/*", (req, res) => {
+  console.log("I am in /* route.......");
+  const STATIC = path.join(__dirname, "build");
+  const INDEX = path.join(STATIC , "index.html")
+  res.sendFile(INDEX);
+});
+
+
+
+
+Using webpack:
+https://medium.com/bb-tutorials-and-thoughts/packaging-your-react-app-with-nodejs-backend-for-production-7ddae2b84f1b
+
+https://medium.com/bb-tutorials-and-thoughts/how-to-develop-and-build-react-app-with-nodejs-bc06fa1c18f3
