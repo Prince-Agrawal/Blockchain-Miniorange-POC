@@ -1,0 +1,27 @@
+{
+  "name": "deploy-nft-hardhat-polygon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "npx hardhat compile"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.0.0",
+    "@truffle/hdwallet-provider": "^2.0.15",
+    "alchemy-sdk": "^2.0.5-rc1",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.2",
+    "nft.storage": "^7.0.0",
+    "web3": "^1.8.0"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.1.1",
+    "ethers": "^5.0.0",
+    "hardhat": "^2.11.2"
+  }
+}

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>NFT Minting</title>
+  </head>
+  <body>
+    <h1 class="text-center text-info">NFT Minting</h1>
+
+    <div class="mb-4 mx-auto span12" style="width: 700px;">
+            <!-- <form onsubmit="handleFormData(event)" id="myForm"> -->
+                <div class="mb-4">
+                    <b><label class="form-label">Network</label></b>
+                    <select class="form-select" aria-label="Default select example" id="networkOption">
+                        <option selected>Select</option>
+                        <option value="polygon">Polygon</option>
+                        <option value="ethereum">Ethereum</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                  <b><label class="form-label">Wallet Address</label></b>
+                  <input type="text" class="form-control" id="walletAddress">
+                </div>
+                <button type="submit" class="btn btn-primary" value="mintNft" onclick="handleMinting()">Mint NFT</button>
+        
+                <button type="submit" class="btn btn-primary" value="balanceOf" onclick="handleBalanceOf()">Balance Of</button>
+            <!-- </form> -->
+        
+    </div>
+
+    <span class="text-center">
+        <p class="fs-3 fw-bold" id="loading"></p>
+        <p class="fs-3 fw-bold" id="nftRelatedData"></p>
+    </span>
+
+    <script>
+        let loading = document.getElementById('loading');
+        let nftRelatedData = document.getElementById('nftRelatedData');
+
+        // Called when Mint NFT button clicks.
+        async function handleMinting(){
+            // e.preventDefault();
+            nftRelatedData.innerHTML = "";
+            let networkOption = document.getElementById('networkOption').value;
+            let walletAddress = document.getElementById('walletAddress').value;
+
+            if(networkOption == 'Select'){
+              alert("Please select valid network.");
+              return false;
+            }
+
+            if(walletAddress == '') {
+              alert('Wallet address must not be empty.');
+              return false;
+            }
+
+            let url = "http://127.0.0.1:3000/mintNft?network="+networkOption+"&walletAddress="+walletAddress
+
+            loading.innerHTML = "Loading...."
+            let fetchData = await fetch(url, { method: 'GET' });
+            let fetchApiResponse = await fetchData.text()
+
+            loading.innerHTML = ""
+            nftRelatedData.innerHTML = `Block Hash is: ${fetchApiResponse}`;
+        }
+
+        // Called when Balance Of button clicked.
+        async function handleBalanceOf(){
+            // e.preventDefault();
+            nftRelatedData.innerHTML = "";
+            let networkOption = document.getElementById('networkOption').value;
+            let walletAddress = document.getElementById('walletAddress').value;
+
+            if(networkOption == 'Select'){
+              alert("Please select valid network.");
+              return false;
+            }
+
+            if(walletAddress == '') {
+              alert('Wallet address must not be empty.');
+              return false;
+            }
+
+            let url = "http://127.0.0.1:3000/balanceOf?network="+networkOption+"&walletAddress="+walletAddress;
+
+            loading.innerHTML = "Loading...."
+            let fetchData = await fetch(url, { method: 'GET' });
+            let fetchApiResponse = await fetchData.text()
+
+            loading.innerHTML = ""
+            nftRelatedData.innerHTML = `Total Number of Tokens for address ${walletAddress} is : ${fetchApiResponse}`;
+        }
+    </script>
+
+  </body>
+</html>

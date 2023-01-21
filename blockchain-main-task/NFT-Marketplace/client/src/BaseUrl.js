@@ -1,0 +1,1 @@
+export let BASE_URL_SERVER = "http://localhost:8687/readNftMarketplaceJson";

@@ -1,0 +1,32 @@
+{
+  "name": "nft-marketplace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "app.js",
+  "scripts": {
+    "start": "concurrently \"nodemon app.js\" \"cd client && npm start\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "concurrently": "^7.5.0",
+    "fs": "^0.0.1-security",
+    "nodemon": "^2.0.20",
+    "react-bootstrap": "^2.5.0",
+    "react-icons": "^4.6.0",
+    "solc": "^0.8.17",
+    "web3": "^1.8.0"
+  },
+  "pkg":{
+    "asserts":[
+      "./node_modules/**/*"
+    ],
+    "scripts":[
+      "./build"
+    ]
+  }
+}

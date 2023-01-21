@@ -1,0 +1,259 @@
+body{
+    background-color: #262626;
+    font-family: poppins;
+  }
+  
+  .w-font{
+    color: white;
+  }
+  
+  .w-para{
+    color: #CFCFCF;
+    text-align: justify !important;
+  }
+  
+  .mo-primary{
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    border-color: #7D69F6;
+    background: #7D69F6;
+    letter-spacing: 1.5px;
+  }
+  
+  .mo-subheading{
+    letter-spacing: 1.5px;
+    color: #7D69F6;
+  }
+  .card-dark{
+    background:black;
+    width: 18rem;
+    margin-left: 30px;
+    margin-top: 30px;
+    border-radius: 4%;
+    box-shadow: 0px 20px 60px rgba(0,0,0, 0.5);
+  }
+  
+  /* .card-img:hover{
+    transition: 1s;
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  } */
+  
+  .h-color{
+    color: white !important;
+  }
+  
+  .p-color{
+    color: #CFCFCF !important;
+  }
+  .r-color{
+    color: #FFCCBB;
+  }
+  
+  
+  
+  .text-justify{
+    text-align: justify;
+  }
+  
+  .price{
+    color: #7D69F6;
+  }
+  
+  .main-price{
+    color: #FFFFFF !important;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 1.3em;
+    letter-spacing: 2px;
+  }
+  
+  .inline-display{
+    display: inline;
+  }
+  
+  .fr{
+    float: right;
+  }
+  
+  .fl{
+    float: left;
+  }
+  
+  .mo-search{
+    border-radius: 30px;
+    height: 32px;
+    margin-left: 50px;
+    background: #606060;
+    border-color: #606064;
+    color: white;
+    margin-top: 5px;
+  }
+  
+  .mo-search-form{
+    width: 30%;
+  }
+  
+  .nav-btn{
+    border-radius: 30px;
+    padding: 5px 20px;
+    background:#7D69F6
+  }
+  
+  .mo-nav{
+    text-align: center;
+    margin-left: 13%;
+  }
+  
+  .mr-30{
+    margin-right: 30px;
+  }
+  .active{
+    color: #7D69F6 !important;
+  }
+  a:active{
+    color: #7D69F6 !important;
+  }
+  
+  .product-card{
+    margin-top: 50px;
+    padding: 30px;
+    background: #34363d;
+    border-radius: 20px;
+    max-height: 470px;
+  }
+  
+  .sub-price{
+    color: #7A8293 !important;
+  }
+  
+  .action-button{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+    background-color: #7D69F6;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #7D69F6;
+    width: 100%;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 0px 0px 0px 0px rgb(54 187 145 / 28%);
+    padding: 17px 50px 17px 50px;
+  }
+  
+  .nft-image{
+    border-radius: 20px;
+  }
+  
+  /* .image-box {
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+    z-index: 1;
+  }
+  
+  
+  .img-card {
+    transition: .5s ease all; 
+    max-width: 100%; 
+    transition: .1s ease all;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-top: 10px;
+    transform: scale(1);
+    border-radius: 20px !important;
+    padding: 5px;
+    object-fit:cover;
+  }
+  
+  .image-box:hover img {
+    transform: scale(1.1);
+    border-radius: 20px;
+  } */
+  
+  .image-box {
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 10px;
+  
+  }
+  
+  .image-box img {
+    max-width: 100%;
+    transition: all 1s;
+    display: block;
+    width: 100%;
+    height: auto;
+    transform: scale(1);
+  }
+  
+  .image-box:hover img {
+    transform: scale(1.2);
+  }
+  
+  .logo{
+    margin-top: 4px;
+    width: 150px !important;
+  }
+  
+  .logo-image{
+    width: 100%;
+  }
+  
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(44, 44, 44) !important;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(44, 44, 44) !important;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(44, 44, 44) !important;
+  }
+  
+  .product-description{
+    max-height: 125px;
+    overflow: auto;
+  }
+  
+  .nft-form{
+    background: #34363d;
+    padding: 50px;
+    border-radius: 20px;
+  }
+  
+  .nft-form input{
+        display: block;
+        width: 100%;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        border-color: black;
+        color: #212529;
+        background-color: #606060;
+        background-clip: padding-box;
+        appearance: none;
+        border-radius: 10px;
+        padding: 10px;
+        transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+  
+  .nft-form label{
+    color: #6c757d;
+  }
+  
+  .file-upload{
+    width: 97%;
+    margin-left: 1.5%;
+  }
+  
